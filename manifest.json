@@ -1,0 +1,22 @@
+{
+    "manifest_version" : 3,
+    "name" : "ReadMe",
+    "description" : "Analyzes your most visited sites each day",
+    "version" : "1.0.0",
+    "author" : "Qasim Wani",
+    "action": {
+      "default_icon": "assets/logo.png",
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "history",
+        "storage"
+     ],
+     "background": {
+      "service_worker": "scripts/background.js"
+    },
+    "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self'"
+    }
+}
